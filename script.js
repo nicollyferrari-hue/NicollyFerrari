@@ -1,4 +1,4 @@
-const botoes = document.querySelectorAll ("button");
+onst botoes = document.querySelectorAll ("button");
 
                   botoes.forEach (function (botao){
                     let cutiu = false;
@@ -15,3 +15,14 @@ const botoes = document.querySelectorAll ("button");
                   }
                   }
               })
+
+              const btnTemaEscuro = document.querySelector (".btn-tema-escuro");
+
+               btnTemaEscuro.addEventListener("click", mudaTema);
+
+               function mudaTema (){
+                const corpoPagina = document.body;
+                if(corpoPagina.classList.contains("tema-escuro")){
+                  corpoPagina.classList.remove("tema-escuro");
+                }
+               }
