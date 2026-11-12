@@ -5,22 +5,43 @@
     --cor-texto:#0a1e33;
     --cor-contraste: #ffffff;
     --cor-botao:#eff7ff;
+
+    --fonte-texto: 'Segoe UI', sans-serif;
 }
+
+.tema-escuro{
+    --cor-primaria: #c3defc;
+    --cor-secundaria:#77a8db;
+    --cor-fundo: #0a133b;
+    --cor-texto:#c3e0fa;
+    --cor-contraste: #0b195f;
+    --cor-botao:#123558;
+}
+
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+.tema-escuro header p{
+    color: var(--cor-contraste);
+}
+
 body{ 
     max-width: 100vw;
+    font-family: var(--fonte-texto)
 }
 
 header{
-                background-color: #0D3763;
-                color:#FFFFFF
+                background-color: var(--cor-primaria);
+                color: var(--cor-contraste);
                 text-align: center;
                 margin: 0 auto;
                 padding: 16px;
                
             }
             main {
-                background-color: #FFFFFF;
-                color:#0D3763;
+                background-color: var(--cor-fundo);
+                color:var(--cor-primaria);
                 margin: 0 auto;
                 padding: 16px;  
 
@@ -31,7 +52,7 @@ header{
             
                 { display: flex;
                 
-                    border: 1px solid #0D3763;
+                    border: 1px solid var(--cor-primaria);
 
                     margin: 16px;
                     gap: 16px;
@@ -53,5 +74,12 @@ header{
 
             }
 
-
+            .btn-tema-escuro{
+                position: fixed;
+                bottom: 16px;
+                right: 16px;
+                font-size: 32px;
+                padding: 12px;
+                background-color: var(--cor-primaria);
+                border-radius: 50%;
             }
